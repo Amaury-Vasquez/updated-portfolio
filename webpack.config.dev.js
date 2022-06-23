@@ -41,19 +41,12 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
     }),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, 'public/manifest'),
-    //       to: 'manifest',
-    //     },
-    //   ],
-    // }),
   ],
   devServer: {
     // contentBase: path.join(__dirname, 'dist'),
     compress: true,
     open: true,
     port: 3005,
+    historyApiFallback: true,
   },
 };
