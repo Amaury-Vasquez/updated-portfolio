@@ -4,8 +4,11 @@ export const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 16px;
-    --shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    --light-shadow: 0px 8px 16px 0px rgba(256, 256, 256, 0.2);
+    --gray: #F2EBE9;
+    --gray-text:#336162;
+    --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    --red: #e84545;
+    --loading-red: #c64756;
     --padding: 15px;
   }
 
@@ -26,10 +29,10 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
     max-width: 100vw;
     overscroll-behavior: none;
-    background-color: #ffffff;
+    background-color: #FfFfFf;
     overflow-x: hidden;
     width: 100%; 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Rubik, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
 `;
