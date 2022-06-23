@@ -1,13 +1,26 @@
-import { Fragment } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { Layout } from './Layout';
+import { Home } from '../pages/Home';
+import { Contact } from '../pages/Contact';
+import { Projects } from '../pages/Projects';
 import { GlobalStyles } from '../styles/GlobalStyles';
-import { Sample } from './Sample';
 
 const App = () => {
   return (
-    <Fragment>
+    <HelmetProvider>
       <GlobalStyles />
-      <Sample />
-    </Fragment>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<Contact />} path="/contact" />
+            <Route element={<Projects />} path="/projects" />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 };
 
