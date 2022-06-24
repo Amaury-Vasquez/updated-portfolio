@@ -1,15 +1,18 @@
+import { Link as Anchor } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { fadeIn } from '../../styles/animation';
+
 export const Head = styled.header`
+  ${fadeIn()};
   margin-top: 30px;
-  min-height: 150px;
-  height: auto;
+  height: 180px;
   width: 100%;
-  padding: 30px var(--padding);
+  padding: 25px var(--padding);
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 9fr;
-  grid-gap: 30px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 30px;
   justify-content: center;
   text-align: left;
   align-items: center;
@@ -31,29 +34,46 @@ export const Image = styled.img`
   grid-row-end: 3;
 `;
 
-export const Name = styled.span`
-  font-size: 1.2rem;
-  font-weight: 400;
+export const Link = styled(Anchor)<{ fill: number }>`
+  color: var(--gray-text);
+  font-weight: 300;
   text-transform: capitalize;
-  text-align: center;
-  & > a {
-    color: var(--gray-text);
+  padding: 10px 30px;
+  transition: transform 0.2s;
+  ${(props) => props.fill === 1 && 'color: var(--blue)'};
+
+  &:hover {
+    color: var(--blue);
+    transform: scale(1.1);
+  }
+`;
+
+export const Name = styled(Anchor)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: var(--gray-text);
+  transition: transform 0.2s;
+  grid-column-start: 3;
+  grid-column-end: 10;
+
+  &:hover {
+    color: var(--blue);
+    transform: scale(1.1);
   }
 `;
 
 export const Nav = styled.nav`
+  grid-column-start: 3;
+  grid-column-end: 10;
+  margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
   width: 100%;
-
-  & > a {
-    color: var(--gray-text);
-    font-weight: 300;
-    text-transform: capitalize;
-
-    &:hover {
-    }
-  }
+  border-top: 1px solid var(--gray);
 `;

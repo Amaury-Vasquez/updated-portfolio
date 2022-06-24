@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-import { Head, Image, Name, Nav } from './styles';
+import { Link, Head, Image, Name, Nav } from './styles';
 
 export const Header = () => {
+  const { pathname } = useLocation();
+  const routes = ['/projects', '/about', '/contact'];
+
   return (
     <Head>
       <Image
@@ -11,13 +14,17 @@ export const Header = () => {
         src="https://i.imgur.com/39jqiyC.jpg"
         alt="profile photo"
       />
-      <Name>
-        <Link to="/"> amaury vasquez</Link>
-      </Name>
+      <Name to="/">amaury vasquez</Name>
       <Nav>
-        <Link to="/projects"> projects </Link>
-        <Link to="/about"> about </Link>
-        <Link to="/contact"> contact </Link>
+        {routes.map((route, i) => (
+          <Link
+            fill={route === pathname ? 1 : 0}
+            key={`${route + i}`}
+            to={route}
+          >
+            {route.slice(1)}
+          </Link>
+        ))}
       </Nav>
     </Head>
   );
