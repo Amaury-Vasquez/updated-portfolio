@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 16px;
+    --blue: #3AB0FF;
     --gray: #F2EBE9;
     --gray-text:#336162;
     --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
