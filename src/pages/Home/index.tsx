@@ -29,9 +29,7 @@ export const Home = () => {
             <IconText Icon={SiPlatzi} color="#95c93c">
               Active student at Platzi.
             </IconText>
-            <IconText Icon={FaUniversity}>
-              Currently studying computer science at ESCOM, IPN.
-            </IconText>
+            <Text>Currently studying computer science at ESCOM, IPN.</Text>
           </Section>
           <Section>
             <p> Skills </p>
