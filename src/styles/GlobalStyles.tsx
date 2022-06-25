@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
     --red: #e84545;
     --loading-red: #c64756;
-    --padding: 15px;
+    --padding: 10px;
   }
 
   *, *:before, *:after {
