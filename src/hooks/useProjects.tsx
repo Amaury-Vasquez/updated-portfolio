@@ -25,8 +25,15 @@ export const useProjects = () => {
       title: 'Rod cutting problem',
     },
     {
+      description: 'Classic snake game created for Linux based OS',
+      imageLink: 'https://i.imgur.com/7q8sc4h.jpg',
+      powered: { color: '#007cc7', Icon: SiCplusplus, tool: '' },
+      repositorie: 'https://github.com/Amaury-Vasquez/Cpp-snake-game',
+      title: 'C++ snake game',
+    },
+    {
       description: 'Checkers offline game for two players. ',
-      imageLink: 'https://i.imgur.com/9RI3UYx.jpg',
+      imageLink: 'https://i.imgur.com/IqRUoXm.png',
       link: 'https://tscheckers.netlify.app/',
       powered: { color: '#5fd3f3', Icon: FaReact, tool: 'React' },
       repositorie: 'https://github.com/Amaury-Vasquez/checkers',
@@ -40,13 +47,6 @@ export const useProjects = () => {
       powered: { color: '#5fd3f3', Icon: FaReact, tool: 'React' },
       repositorie: 'https://github.com/Amaury-Vasquez/game-station',
       title: 'Game station',
-    },
-    {
-      description: 'Classic snake game created for Linux based OS',
-      imageLink: 'https://i.imgur.com/7q8sc4h.jpg',
-      powered: { color: '#007cc7', Icon: SiCplusplus, tool: '' },
-      repositorie: 'https://github.com/Amaury-Vasquez/Cpp-snake-game',
-      title: 'C++ snake game',
     },
   ];
 
