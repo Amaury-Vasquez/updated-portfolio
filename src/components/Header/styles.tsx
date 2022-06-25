@@ -8,7 +8,7 @@ export const Head = styled.header`
   margin-top: 30px;
   height: 180px;
   width: 100%;
-  padding: 25px var(--padding);
+  padding: 25px 15px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: repeat(10, 1fr);
@@ -24,6 +24,13 @@ export const Head = styled.header`
     box-shadow: var(--shadow);
     border-bottom: none;
   }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    height: 140px;
+    margin-top: 0;
+  }
 `;
 
 export const Image = styled.img`
@@ -32,6 +39,12 @@ export const Image = styled.img`
   border-radius: 100%;
   grid-row-start: 1;
   grid-row-end: 3;
+
+  @media screen and (max-width: 500px) {
+    grid-row-end: 2;
+    height: 60px;
+    width: 60px;
+  }
 `;
 
 export const Link = styled(Anchor)<{ fill: number }>`
@@ -59,10 +72,18 @@ export const Name = styled(Anchor)`
   transition: transform 0.2s;
   grid-column-start: 3;
   grid-column-end: 10;
+  border-bottom: 1px solid var(--gray);
+  height: 100%;
 
   &:hover {
     color: var(--blue);
     transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 700px) {
+    border: none;
+    grid-column-start: 2;
+    grid-column-end: 5;
   }
 `;
 
@@ -75,5 +96,10 @@ export const Nav = styled.nav`
   align-items: center;
   height: 100%;
   width: 100%;
-  border-top: 1px solid var(--gray);
+
+  @media screen and (max-width: 700px) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-top: 10px;
+  }
 `;

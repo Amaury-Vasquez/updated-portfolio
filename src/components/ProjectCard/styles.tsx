@@ -14,10 +14,18 @@ export const Card = styled.div<{ loaded: boolean }>`
   border-radius: 3px;
   justify-content: center;
   align-items: center;
+  color: var(--gray-text);
 
   &:hover {
     box-shadow: var(--shadow);
     opacity: 0.8;
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    padding: 10px 5px;
+    border: none;
+    box-shadow: var(--shadow);
   }
 `;
 
@@ -52,7 +60,7 @@ export const ProjectInfo = styled.article`
   /* border: 1px solid black; */
   padding: 0 30px;
   text-align: center;
-  line-height: 2.5rem;
+  line-height: 2rem;
 
   & > h3 {
     text-align: center;
@@ -64,5 +72,9 @@ export const ProjectInfo = styled.article`
   span {
     font-weight: 300;
     font-size: 1rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0 5px;
   }
 `;
