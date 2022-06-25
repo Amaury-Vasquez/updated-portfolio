@@ -39,7 +39,7 @@ export const ProjectCard = (props: { data: ProjectData }) => {
         )}
         <LinkSpan>
           {'Repositorie: '}
-          <a href={data.link} target="_blank" rel="noreferrer">
+          <a href={data.repositorie} target="_blank" rel="noreferrer">
             {data.repositorie}
           </a>
         </LinkSpan>
