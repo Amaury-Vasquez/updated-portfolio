@@ -1,8 +1,8 @@
 export const DeviceSize = {
-  smallMobile: '320px',
-  mobile: '500px',
-  tablet: '800px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px',
+  smallMobile: 'max-width: 320px',
+  mobile: 'max-width: 500px',
+  tablet: 'max-width: 800px',
+  laptop: 'min-width: 1024px',
+  laptopL: 'min-width: 1440px',
+  desktop: 'min-width: 2560px',
 };
