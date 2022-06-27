@@ -24,7 +24,6 @@ export const Head = styled.header`
     box-shadow: var(--shadow);
     border-bottom: none;
   }
-
   @media screen and (max-width: 500px) {
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
@@ -41,7 +40,6 @@ export const Image = styled.img`
   border-radius: 100%;
   grid-row-start: 1;
   grid-row-end: 3;
-
   @media screen and (max-width: 500px) {
     grid-row-end: 2;
     height: 60px;
@@ -81,7 +79,6 @@ export const Name = styled(Anchor)`
     color: var(--blue);
     transform: scale(1.1);
   }
-
   @media screen and (max-width: 500px) {
     border: none;
     grid-column-start: 2;
@@ -98,7 +95,6 @@ export const Nav = styled.nav`
   align-items: center;
   height: 100%;
   width: 100%;
-
   @media screen and (max-width: 500px) {
     grid-column-start: 1;
     grid-column-end: 5;

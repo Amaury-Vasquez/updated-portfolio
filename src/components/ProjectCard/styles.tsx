@@ -20,7 +20,6 @@ export const Card = styled.div<{ loaded: boolean }>`
     box-shadow: var(--shadow);
     opacity: 0.8;
   }
-
   @media screen and (max-width: 500px) {
     grid-template-columns: 1fr;
     padding: 10px 5px;
@@ -73,7 +72,6 @@ export const ProjectInfo = styled.article`
     font-weight: 300;
     font-size: 1rem;
   }
-
   @media screen and (max-width: 500px) {
     padding: 0 5px;
   }

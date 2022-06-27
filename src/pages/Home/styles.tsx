@@ -14,7 +14,6 @@ export const Greeting = styled.div`
   border-radius: 5px;
   text-align: center;
   line-height: 2rem;
-
   @media screen and (max-width: 500px) {
     width: 100%;
     padding: 20px 20px;
@@ -34,7 +33,6 @@ export const Info = styled.div`
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   @media screen and (max-width: 500px) {
     display: block;
   }

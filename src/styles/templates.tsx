@@ -6,7 +6,6 @@ export const Page = styled.div`
   width: 1024px;
   max-width: 1024px;
   margin: 0 auto;
-
   @media screen and (max-width: 500px) {
     width: 100vw;
   }
