@@ -29,10 +29,11 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
     margin: 0 auto;
     max-width: 100vw;
-    overscroll-behavior: none;
+    overscroll-behavior-x: none;
     background-color: #FfFfFf;
     overflow-x: hidden;
-    width: 100%; 
+    width: 100vw;
+    max-width: 100vw;
     font-family: Rubik, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
