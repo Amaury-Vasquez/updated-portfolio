@@ -30,6 +30,8 @@ export const Head = styled.header`
     grid-template-columns: repeat(4, 1fr);
     height: 140px;
     margin-top: 0;
+    grid-column-gap: 0px;
+    box-sizing: border-box;
   }
 `;
 
