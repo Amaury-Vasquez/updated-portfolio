@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
+import { DeviceSize } from '../../DeviceSize';
 import { fadeIn } from '../../styles/animation';
 
 export const Card = styled.div<{ loaded: boolean }>`
-  display: ${(props) => (props.loaded ? 'grid' : 'none')};
   ${fadeIn()};
+  display: ${(props) => (props.loaded ? 'grid' : 'none')};
   width: 100%;
   min-height: 200px;
   height: auto;
-  grid-template-columns: 1fr 3fr;
-  padding: 30px;
   border: 1px solid var(--gray);
   border-radius: 3px;
   justify-content: center;
@@ -20,11 +19,17 @@ export const Card = styled.div<{ loaded: boolean }>`
     box-shadow: var(--shadow);
     opacity: 0.8;
   }
-  @media screen and (max-width: 500px) {
+
+  @media (max-width: ${DeviceSize.mobile}) {
     grid-template-columns: 1fr;
     padding: 10px 5px;
     border: none;
     box-shadow: var(--shadow);
+  }
+
+  @media (min-width: ${DeviceSize.laptop}) {
+    grid-template-columns: 1fr 3fr;
+    padding: 30px;
   }
 `;
 
@@ -72,7 +77,7 @@ export const ProjectInfo = styled.article`
     font-weight: 300;
     font-size: 1rem;
   }
-  @media screen and (max-width: 500px) {
+  @media (max-width: ${DeviceSize.mobile}) {
     padding: 0 5px;
   }
 `;

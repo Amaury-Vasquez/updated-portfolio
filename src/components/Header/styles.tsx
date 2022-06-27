@@ -1,36 +1,43 @@
 import { Link as Anchor } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { DeviceSize } from '../../DeviceSize';
 import { fadeIn } from '../../styles/animation';
 
 export const Head = styled.header`
   ${fadeIn()};
-  margin-top: 30px;
-  height: 180px;
-  width: 100%;
   padding: 25px 15px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(10, 1fr);
-  grid-column-gap: 30px;
   justify-content: center;
   text-align: left;
   align-items: center;
   border-radius: 5px;
   color: var(--gray-text);
   border-bottom: 1px solid var(--gray);
+  grid-template-rows: 1fr 1fr;
 
   &:hover {
     box-shadow: var(--shadow);
     border-bottom: none;
   }
-  @media screen and (max-width: 500px) {
-    width: 100%;
+
+  @media (max-width: ${DeviceSize.mobile}) {
+    width: 100vw;
     grid-template-columns: repeat(4, 1fr);
     height: 140px;
     margin-top: 0;
     grid-column-gap: 0px;
     box-sizing: border-box;
+  }
+
+  @media (min-width: ${DeviceSize.laptop}) {
+    width: 1024px;
+    max-width: 1024px;
+    margin-top: 30px;
+    height: 180px;
+    width: 100%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 30px;
   }
 `;
 
@@ -40,7 +47,7 @@ export const Image = styled.img`
   border-radius: 100%;
   grid-row-start: 1;
   grid-row-end: 3;
-  @media screen and (max-width: 500px) {
+  @media (max-width: ${DeviceSize.mobile}) {
     grid-row-end: 2;
     height: 60px;
     width: 60px;
@@ -79,7 +86,7 @@ export const Name = styled(Anchor)`
     color: var(--blue);
     transform: scale(1.1);
   }
-  @media screen and (max-width: 500px) {
+  @media (max-width: ${DeviceSize.mobile}) {
     border: none;
     grid-column-start: 2;
     grid-column-end: 5;
@@ -95,7 +102,7 @@ export const Nav = styled.nav`
   align-items: center;
   height: 100%;
   width: 100%;
-  @media screen and (max-width: 500px) {
+  @media (max-width: ${DeviceSize.mobile}) {
     grid-column-start: 1;
     grid-column-end: 5;
     margin-top: 10px;
