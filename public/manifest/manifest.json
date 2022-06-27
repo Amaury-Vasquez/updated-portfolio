@@ -1,7 +1,7 @@
 {
-  "short_name": "React boilerplate",
-  "name": "React boilerplate created by Amaury Vasquez",
-  "description": "Boilerplate created to generate React and typescript projects",
+  "short_name": "Amaury Vasquez",
+  "name": "Personal web page of @AmauryVasquez",
+  "description": "Web page created to show a brief description of who Amaury Vasquez is",
   "icons": [
     {
       "src": "template.ico",
