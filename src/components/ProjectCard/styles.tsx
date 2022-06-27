@@ -20,16 +20,16 @@ export const Card = styled.div<{ loaded: boolean }>`
     opacity: 0.8;
   }
 
+  @media (min-width: ${DeviceSize.laptop}) {
+    grid-template-columns: 1fr 3fr;
+    padding: 30px;
+  }
+
   @media (max-width: ${DeviceSize.mobile}) {
     grid-template-columns: 1fr;
     padding: 10px 5px;
     border: none;
     box-shadow: var(--shadow);
-  }
-
-  @media (min-width: ${DeviceSize.laptop}) {
-    grid-template-columns: 1fr 3fr;
-    padding: 30px;
   }
 `;
 
@@ -77,6 +77,7 @@ export const ProjectInfo = styled.article`
     font-weight: 300;
     font-size: 1rem;
   }
+
   @media (max-width: ${DeviceSize.mobile}) {
     padding: 0 5px;
   }

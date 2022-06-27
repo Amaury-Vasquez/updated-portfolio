@@ -21,23 +21,20 @@ export const Head = styled.header`
     border-bottom: none;
   }
 
+  @media (min-width: ${DeviceSize.laptop}) {
+    width: 100%;
+    margin-top: 30px;
+    height: 180px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 30px;
+  }
+
   @media (max-width: ${DeviceSize.mobile}) {
     width: 100vw;
     grid-template-columns: repeat(4, 1fr);
     height: 140px;
     margin-top: 0;
     grid-column-gap: 0px;
-    box-sizing: border-box;
-  }
-
-  @media (min-width: ${DeviceSize.laptop}) {
-    width: 1024px;
-    max-width: 1024px;
-    margin-top: 30px;
-    height: 180px;
-    width: 100%;
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 30px;
   }
 `;
 
@@ -47,6 +44,7 @@ export const Image = styled.img`
   border-radius: 100%;
   grid-row-start: 1;
   grid-row-end: 3;
+
   @media (max-width: ${DeviceSize.mobile}) {
     grid-row-end: 2;
     height: 60px;
@@ -86,6 +84,7 @@ export const Name = styled(Anchor)`
     color: var(--blue);
     transform: scale(1.1);
   }
+
   @media (max-width: ${DeviceSize.mobile}) {
     border: none;
     grid-column-start: 2;
@@ -102,6 +101,7 @@ export const Nav = styled.nav`
   align-items: center;
   height: 100%;
   width: 100%;
+
   @media (max-width: ${DeviceSize.mobile}) {
     grid-column-start: 1;
     grid-column-end: 5;
