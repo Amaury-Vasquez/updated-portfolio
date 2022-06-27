@@ -14,14 +14,14 @@ export const Greeting = styled.div`
   text-align: center;
   line-height: 2rem;
 
-  @media (max-width: ${DeviceSize.mobile}) {
-    width: 100%;
-    padding: 20px 20px;
-  }
-
   @media (min-width: ${DeviceSize.laptop}) {
     width: 98%;
     padding: 30px 50px;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
+    width: 100%;
+    padding: 20px 20px;
   }
 `;
 
