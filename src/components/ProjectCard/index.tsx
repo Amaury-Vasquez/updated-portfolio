@@ -9,9 +9,6 @@ export const ProjectCard = (props: { data: ProjectData }) => {
   const { color, Icon, tool } = data.powered;
 
   const onImageLoad = () => setLoaded(true);
-  useEffect(() => {
-    console.log(loaded);
-  }, [loaded]);
 
   return (
     <Card loaded={loaded}>
