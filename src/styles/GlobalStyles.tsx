@@ -33,7 +33,6 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #FfFfFf;
     overflow-x: hidden;
     width: 100vw;
-    max-width: 100vw;
     font-family: Rubik, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
