@@ -80,7 +80,7 @@ export const Name = styled(Anchor)`
     transform: scale(1.1);
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     border: none;
     grid-column-start: 2;
     grid-column-end: 5;
@@ -97,7 +97,7 @@ export const Nav = styled.nav`
   height: 100%;
   width: 100%;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     grid-column-start: 1;
     grid-column-end: 5;
     margin-top: 10px;
