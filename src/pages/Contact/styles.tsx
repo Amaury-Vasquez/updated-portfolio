@@ -1,22 +1,32 @@
 import styled from 'styled-components';
 
-export const ContactInfo = styled.div`
-  width: 98%;
-  height: auto;
-  padding: 50px 20%;
-  margin: 0 auto;
-  margin-top: 30px;
-  border-radius: 3px;
+import { DeviceSize } from '../../DeviceSize';
 
-  &:hover {
-    box-shadow: var(--shadow);
-  }
+export const ContactInfo = styled.div`
+  height: auto;
+  margin: 0 auto;
+  border-radius: 3px;
 
   & > p {
     text-align: center;
     line-height: 2rem;
     font-size: 1rem;
     color: var(--gray-text);
+  }
+
+  @media (${DeviceSize.laptop}) {
+    margin-top: 30px;
+    width: 98%;
+    padding: 50px 20%;
+  }
+
+  @media (${DeviceSize.mobile}) {
+    width: 100%;
+    padding: 30px;
+    margin-top: 50px;
+    & p:nth-child(3) {
+      margin-top: 20px;
+    }
   }
 `;
 
