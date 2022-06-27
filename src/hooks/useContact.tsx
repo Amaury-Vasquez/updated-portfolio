@@ -9,11 +9,6 @@ interface ContactIcon {
 export const useContact = () => {
   const contactData: ContactIcon[] = [
     {
-      color: '#016de5',
-      Icon: FaFacebook,
-      link: 'https://www.facebook.com/amaury.vasquezenriquez/',
-    },
-    {
       color: '#23292f',
       Icon: FaGithub,
       link: 'https://github.com/Amaury-Vasquez',
