@@ -32,7 +32,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: 'src/index.html' }),
+    new HtmlWebpackPlugin({ template: 'public/index.html' }),
     new CopyWebpackPlugin({
       patterns: [
         {
