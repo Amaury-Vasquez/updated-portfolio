@@ -21,7 +21,7 @@ export const Head = styled.header`
     border-bottom: none;
   }
 
-  @media (min-width: ${DeviceSize.laptop}) {
+  @media (${DeviceSize.laptop}) {
     width: 100%;
     margin-top: 30px;
     height: 180px;
@@ -29,7 +29,7 @@ export const Head = styled.header`
     grid-column-gap: 30px;
   }
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     width: 100vw;
     grid-template-columns: repeat(4, 1fr);
     height: 140px;
@@ -45,7 +45,7 @@ export const Image = styled.img`
   grid-row-start: 1;
   grid-row-end: 3;
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     grid-row-end: 2;
     height: 60px;
     width: 60px;
@@ -85,7 +85,7 @@ export const Name = styled(Anchor)`
     transform: scale(1.1);
   }
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     border: none;
     grid-column-start: 2;
     grid-column-end: 5;
@@ -102,7 +102,7 @@ export const Nav = styled.nav`
   height: 100%;
   width: 100%;
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     grid-column-start: 1;
     grid-column-end: 5;
     margin-top: 10px;

@@ -20,12 +20,12 @@ export const Card = styled.div<{ loaded: boolean }>`
     opacity: 0.8;
   }
 
-  @media (min-width: ${DeviceSize.laptop}) {
+  @media (${DeviceSize.laptop}) {
     grid-template-columns: 1fr 3fr;
     padding: 30px;
   }
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     grid-template-columns: 1fr;
     padding: 10px 5px;
     border: none;
@@ -78,7 +78,7 @@ export const ProjectInfo = styled.article`
     font-size: 1rem;
   }
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     padding: 0 5px;
   }
 `;

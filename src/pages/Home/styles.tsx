@@ -14,12 +14,12 @@ export const Greeting = styled.div`
   text-align: center;
   line-height: 2rem;
 
-  @media (min-width: ${DeviceSize.laptop}) {
+  @media (${DeviceSize.laptop}) {
     width: 98%;
     padding: 30px 50px;
   }
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     width: 100%;
     padding: 20px 20px;
   }
@@ -39,7 +39,7 @@ export const Info = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     display: block;
   }
 `;
