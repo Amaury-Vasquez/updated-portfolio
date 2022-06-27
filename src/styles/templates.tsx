@@ -7,12 +7,12 @@ export const Page = styled.div`
   height: auto;
   margin: 0 auto;
 
-  @media (min-width: ${DeviceSize.laptop}) {
+  @media (${DeviceSize.laptop}) {
     width: 1024px;
     max-width: 1024px;
   }
 
-  @media (max-width: ${DeviceSize.mobile}) {
+  @media (${DeviceSize.mobile}) {
     width: 100vw;
   }
 `;
