@@ -22,12 +22,21 @@ export const Card = styled.div<{ loaded: boolean }>`
     opacity: 0.8;
   }
 
-  @media (${DeviceSize.laptop}) {
+  @media (min-width: ${DeviceSize.laptop}) {
     grid-template-columns: 1fr 3fr;
     padding: 30px;
   }
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.tablet}) and (min-width: ${DeviceSize.smallTablet}) {
+    grid-template-columns: 1fr 2fr;
+    padding: 10px;
+  }
+
+  @media (max-width: ${DeviceSize.smallTablet}) and (min-width: ${DeviceSize.mobile}) {
+    padding: 10px;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
     grid-template-columns: 1fr;
     padding: 10px 5px;
     border: none;
@@ -95,7 +104,7 @@ export const ProjectInfo = styled.article`
     font-size: 1rem;
   }
 
-  @media (${DeviceSize.mobile}) {
-    padding: 0 5px;
+  @media (max-width: ${DeviceSize.mobile}) {
+    padding: 5px;
   }
 `;

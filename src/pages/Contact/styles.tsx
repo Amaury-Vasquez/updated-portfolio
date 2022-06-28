@@ -14,13 +14,22 @@ export const ContactInfo = styled.div`
     color: var(--gray-text);
   }
 
-  @media (${DeviceSize.laptop}) {
+  @media (min-width: ${DeviceSize.laptop}) {
     margin-top: 30px;
     width: 98%;
     padding: 50px 20%;
   }
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.tablet}) and (min-width: ${DeviceSize.smallTablet}) {
+    /* margin-top: 200px; */
+    padding: 100px 150px;
+  }
+
+  @media (max-width: ${DeviceSize.smallTablet}) and (min-width: ${DeviceSize.mobile}) {
+    padding: 50px;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
     width: 100%;
     padding: 30px;
     margin-top: 50px;

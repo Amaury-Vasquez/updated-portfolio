@@ -16,8 +16,11 @@ export const Info = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.tablet}) {
     display: block;
+    & > article:nth-child(1) {
+      margin-bottom: 30px;
+    }
   }
 `;
 

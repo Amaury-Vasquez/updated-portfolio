@@ -14,6 +14,8 @@ export const Head = styled.header`
   color: var(--gray-text);
   border-bottom: 1px solid var(--gray);
   grid-template-rows: 1fr 1fr;
+  height: auto;
+  width: 100%;
 
   &:hover,
   :focus {
@@ -21,17 +23,23 @@ export const Head = styled.header`
     border-bottom: none;
   }
 
-  @media (${DeviceSize.laptop}) {
-    width: 100%;
+  @media (min-width: ${DeviceSize.laptop}) {
     margin-top: 30px;
-    height: auto;
     padding: 20px 15px;
     grid-template-columns: repeat(10, 1fr);
     grid-column-gap: 30px;
   }
 
-  @media (${DeviceSize.mobile}) {
-    width: 100vw;
+  @media (max-width: ${DeviceSize.tablet}) and (min-width: ${DeviceSize.mobile}) {
+    padding: 25px 30px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: ${DeviceSize.smallTablet}) and (min-width: ${DeviceSize.mobile}) {
+    padding: 10px;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
     grid-template-columns: repeat(4, 1fr);
     height: 140px;
     grid-column-gap: 0px;
@@ -53,7 +61,7 @@ export const ImageContainer = styled.div`
     height: inherit;
   }
 
-  @media (${DeviceSize.laptop}) {
+  @media (min-width: ${DeviceSize.laptop}) {
     height: 100px;
     width: 100px;
     grid-row-end: 3;
@@ -61,7 +69,14 @@ export const ImageContainer = styled.div`
     grid-column-end: 3;
   }
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.tablet}) and (min-width: ${DeviceSize.mobile}) {
+    /* margin: 0 auto; */
+    grid-row-end: 3;
+    height: 80px;
+    width: 80px;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
     grid-row-end: 2;
     height: 60px;
     width: 60px;
@@ -105,7 +120,12 @@ export const Name = styled(Anchor)`
     transform: scale(1.1);
   }
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.tablet}) and (min-width: ${DeviceSize.mobile}) {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
     border: none;
     grid-column-start: 2;
     grid-column-end: 5;
@@ -122,11 +142,16 @@ export const Nav = styled.nav`
   height: 100%;
   width: 100%;
 
-  @media (${DeviceSize.laptop}) {
+  @media (min-width: ${DeviceSize.laptop}) {
     align-items: flex-end;
   }
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.tablet}) and (min-width: ${DeviceSize.mobile}) {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
     grid-column-start: 1;
     grid-column-end: 5;
     margin-top: 10px;

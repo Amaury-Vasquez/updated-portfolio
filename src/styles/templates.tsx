@@ -15,8 +15,8 @@ export const Article = styled.article`
     font-weight: 300;
   }
 
-  @media (${DeviceSize.mobile}) {
-    margin-top: 20px;
+  @media (max-width: ${DeviceSize.smallTablet}) {
+    margin-top: 10px;
   }
 `;
 
@@ -31,12 +31,12 @@ export const Page = styled.div`
   height: auto;
   margin: 0 auto;
 
-  @media (${DeviceSize.laptop}) {
+  @media (min-width: ${DeviceSize.laptop}) {
     width: 1024px;
     max-width: 1024px;
   }
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.smallTablet}) {
     width: 100vw;
   }
 `;
@@ -51,14 +51,19 @@ export const TextContent = styled.div`
   text-align: center;
   line-height: var(--line-height);
 
-  @media (${DeviceSize.laptop}) {
+  @media (min-width: ${DeviceSize.laptop}) {
     width: 98%;
     padding: 30px 50px;
     margin-top: 30px;
   }
 
-  @media (${DeviceSize.mobile}) {
+  @media (max-width: ${DeviceSize.tablet}) and (min-width: ${DeviceSize.mobile}) {
+    padding: 40px 50px;
+    min-height: 90vh;
+  }
+
+  @media (max-width: ${DeviceSize.mobile}) {
     width: 100%;
-    padding: 20px 20px;
+    padding: 25px 20px;
   }
 `;

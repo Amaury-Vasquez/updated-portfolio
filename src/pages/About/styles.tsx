@@ -7,7 +7,7 @@ export const InfoSection = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
 
-  @media (${DeviceSize.laptop}) {
+  @media (min-width: ${DeviceSize.smallTablet}) {
     display: grid;
     height: auto;
     grid-template-columns: 1fr 1fr;
