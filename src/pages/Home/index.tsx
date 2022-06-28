@@ -2,10 +2,11 @@ import { GiHand } from 'react-icons/gi';
 import { Helmet } from 'react-helmet-async';
 import { FcVoicePresentation } from 'react-icons/fc';
 import { SiPlatzi, SiTypescript } from 'react-icons/si';
-import { FaCode, FaNodeJs, FaReact, FaUniversity } from 'react-icons/fa';
+import { FaCode, FaNodeJs, FaReact } from 'react-icons/fa';
 
+import { Hello, Info, Text } from './styles';
 import { IconText } from '../../components/IconText';
-import { Greeting, Hello, Info, Section, Text } from './styles';
+import { Article, BoldText, TextContent } from '../../styles/templates';
 
 export const Home = () => {
   return (
@@ -13,7 +14,7 @@ export const Home = () => {
       <Helmet>
         <title> Amaury Vasquez </title>
       </Helmet>
-      <Greeting>
+      <TextContent>
         <Hello>
           <GiHand /> Hello, welcome to my portfolio!
         </Hello>
@@ -23,16 +24,17 @@ export const Home = () => {
           <FcVoicePresentation />
         </Text>
         <br />
+        <br />
         <Info>
-          <Section>
-            <p> Formation </p>
+          <Article>
+            <BoldText> Formation </BoldText>
             <IconText Icon={SiPlatzi} color="#95c93c">
               Active student at Platzi.
             </IconText>
             <Text>Currently studying computer science at ESCOM, IPN.</Text>
-          </Section>
-          <Section>
-            <p> Skills </p>
+          </Article>
+          <Article>
+            <BoldText> Skills </BoldText>
             <IconText Icon={FaReact} color="#5fd3f3">
               React (proficient)
             </IconText>
@@ -43,10 +45,10 @@ export const Home = () => {
             <IconText Icon={FaNodeJs} color="#83be49">
               Node, Express JS (intermediate)
             </IconText>
-          </Section>
+          </Article>
         </Info>
         <br />
-      </Greeting>
+      </TextContent>
     </>
   );
 };
