@@ -1,19 +1,24 @@
 import { useLocation } from 'react-router-dom';
 
-import { Link, Head, Image, Name, Nav } from './styles';
+import { Loader } from '../Loader';
+import { useImageLoad } from '../../hooks/useImageLoad';
+import { Link, Head, ImageContainer, Name, Nav } from './styles';
 
 export const Header = () => {
   const { pathname } = useLocation();
+  const { img, loaded } = useImageLoad('https://i.imgur.com/39jqiyC.jpg');
+
   const routes = ['/projects', '/about', '/contact'];
 
   return (
     <Head>
-      <Image
-        width={'100px'}
-        height="100px"
-        src="https://i.imgur.com/39jqiyC.jpg"
-        alt="profile photo"
-      />
+      <ImageContainer>
+        {loaded ? (
+          <img width="100px" height="110px" src={img} alt="profile photo" />
+        ) : (
+          <Loader />
+        )}
+      </ImageContainer>
       <Name to="/">amaury vasquez</Name>
       <Nav>
         {routes.map((route, i) => (
