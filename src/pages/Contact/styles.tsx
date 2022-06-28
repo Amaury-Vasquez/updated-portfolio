@@ -49,9 +49,12 @@ export const Link = styled.a<{ color: string }>`
 
   & > svg {
     color: ${(props) => props.color};
-    &:hover {
-      opacity: 0.6;
-    }
+  }
+
+  &:hover,
+  :focus {
+    outline: none;
+    opacity: 0.5;
   }
 `;
 
