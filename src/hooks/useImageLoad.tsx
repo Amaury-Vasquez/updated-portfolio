@@ -6,15 +6,19 @@ export const useImageLoad = (url: string) => {
 
   useEffect(() => {
     const fetchImage = async () => {
-      const res = await fetch(url, {
-        cache: 'no-cache',
-        credentials: 'omit',
-        referrerPolicy: 'strict-origin-when-cross-origin',
-      });
-      await res.blob().then((imgObj) => {
-        setLoaded(true);
-        setImg(URL.createObjectURL(imgObj));
-      });
+      try {
+        const res = await fetch(url, {
+          cache: 'no-cache',
+          credentials: 'omit',
+          referrerPolicy: 'strict-origin-when-cross-origin',
+        });
+        await res.blob().then((imgObj) => {
+          setLoaded(true);
+          setImg(URL.createObjectURL(imgObj));
+        });
+      } catch (e) {
+        console.log(e);
+      }
     };
     fetchImage();
   }, []);
