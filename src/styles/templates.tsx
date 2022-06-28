@@ -45,7 +45,7 @@ export const TextContent = styled.div`
   ${fadeIn()};
   margin: 0 auto;
   height: auto;
-  background: rgba(200, 200, 200, 0.1);
+  background: var(--white-rgba);
   color: var(--gray-text);
   border-radius: 5px;
   text-align: center;
