@@ -11,16 +11,16 @@ import { registerRoute, NavigationRoute } from 'workbox-routing';
 
 NavigationRoute('/index.html');
 precacheAndRoute(self.__WB_MANIFEST);
-// registerRoute(
-//   /^https?:\/\/www.imgur.com\/.*/,
-//   new CacheFirst({
-//     plugins: [
-//       new ExpirationPlugin({
-//         maxAgeSeconds: 24 * 60 * 60 * 30,
-//       }),
-//     ],
-//   })
-// );
+registerRoute(
+  /^https?:\/\/www.imgur.com\/.*/,
+  new CacheFirst({
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: 24 * 60 * 60 * 30,
+      }),
+    ],
+  })
+);
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') self.skipWaiting();
