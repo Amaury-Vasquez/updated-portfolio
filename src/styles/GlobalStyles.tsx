@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     --red: #e84545;
     --loading-red: #c64756;
     --line-height: 2rem;
+    --white-rgba: rgba(200, 200, 200, 0.1);
   }
 
   *, *:before, *:after {
