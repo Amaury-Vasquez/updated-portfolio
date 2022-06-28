@@ -33,7 +33,7 @@ export const useProjects = () => {
     },
     {
       description: 'Checkers offline game for two players. ',
-      imageLink: 'https://i.imgur.com/IqRUoXm.png',
+      imageLink: 'https://i.imgur.com/kiflcvC.png',
       link: 'https://tscheckers.netlify.app/',
       powered: { color: '#5fd3f3', Icon: FaReact, tool: 'React' },
       repositorie: 'https://github.com/Amaury-Vasquez/checkers',
