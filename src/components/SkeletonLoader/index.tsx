@@ -1,13 +1,12 @@
-import { FaUserSecret } from 'react-icons/fa';
-
+import { FC } from 'react';
 import { Animated, Skeleton } from './styles';
 
-export const SkeletonLoader = () => {
+export const SkeletonLoader = (props: { Icon?: FC; time?: string }) => {
+  const { Icon, time } = props;
+
   return (
     <Skeleton>
-      <Animated>
-        <FaUserSecret />
-      </Animated>
+      <Animated time={time ? time : '5s'}>{Icon && <Icon />}</Animated>
     </Skeleton>
   );
 };

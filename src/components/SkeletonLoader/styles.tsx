@@ -9,7 +9,7 @@ const placeHolderKeyframes = keyframes`
   }
 `;
 
-const skeleton = ({ time = '2s' } = {}) => css`
+const skeleton = ({ time = '5s' } = {}) => css`
   animation-duration: ${time};
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -20,8 +20,8 @@ const skeleton = ({ time = '2s' } = {}) => css`
 //Height and width is expected to be given by the father
 export const Skeleton = styled.div``;
 
-export const Animated = styled.div`
-  ${skeleton({ time: '5s' })}
+export const Animated = styled.div<{ time: string }>`
+  ${(props) => props.time && skeleton({ time: props.time })};
   border-radius: inherit;
   background: linear-gradient(
     to right,
