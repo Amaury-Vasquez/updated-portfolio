@@ -6,7 +6,6 @@ import { fadeIn } from '../../styles/animation';
 
 export const Head = styled.header`
   ${fadeIn()};
-  padding: 25px 15px;
   display: grid;
   justify-content: center;
   text-align: left;
@@ -16,7 +15,8 @@ export const Head = styled.header`
   border-bottom: 1px solid var(--gray);
   grid-template-rows: 1fr 1fr;
 
-  &:hover {
+  &:hover,
+  :focus {
     box-shadow: var(--shadow);
     border-bottom: none;
   }
@@ -24,7 +24,8 @@ export const Head = styled.header`
   @media (${DeviceSize.laptop}) {
     width: 100%;
     margin-top: 30px;
-    height: 180px;
+    height: auto;
+    padding: 20px 15px;
     grid-template-columns: repeat(10, 1fr);
     grid-column-gap: 30px;
   }
@@ -33,17 +34,20 @@ export const Head = styled.header`
     width: 100vw;
     grid-template-columns: repeat(4, 1fr);
     height: 140px;
-    margin-top: 0;
     grid-column-gap: 0px;
+    padding: 25px 15px;
   }
 `;
 
 export const Image = styled.img`
-  height: 120px;
-  width: 120px;
   border-radius: 100%;
   grid-row-start: 1;
   grid-row-end: 3;
+
+  @media (${DeviceSize.laptop}) {
+    height: 100px;
+    width: 100px;
+  }
 
   @media (${DeviceSize.mobile}) {
     grid-row-end: 2;
@@ -60,7 +64,9 @@ export const Link = styled(Anchor)<{ fill: number }>`
   transition: transform 0.2s;
   ${(props) => props.fill === 1 && 'color: var(--blue)'};
 
-  &:hover {
+  &:hover,
+  :focus {
+    outline: none;
     color: var(--blue);
     transform: scale(1.1);
   }
@@ -80,7 +86,9 @@ export const Name = styled(Anchor)`
   border-bottom: 1px solid var(--gray);
   height: 100%;
 
-  &:hover {
+  &:hover,
+  :focus {
+    outline: none;
     color: var(--blue);
     transform: scale(1.1);
   }
@@ -101,6 +109,10 @@ export const Nav = styled.nav`
   align-items: center;
   height: 100%;
   width: 100%;
+
+  @media (${DeviceSize.laptop}) {
+    align-items: flex-end;
+  }
 
   @media (${DeviceSize.mobile}) {
     grid-column-start: 1;

@@ -15,7 +15,9 @@ export const Card = styled.div<{ loaded: boolean }>`
   align-items: center;
   color: var(--gray-text);
 
-  &:hover {
+  &:hover,
+  :focus {
+    outline: none;
     box-shadow: var(--shadow);
     opacity: 0.8;
   }
@@ -51,8 +53,23 @@ export const Image = styled.img`
 export const LinkSpan = styled.span`
   font-style: italic;
   & > a {
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid var(--blue);
+      opacity: 0.9;
+      padding: 0 4px;
+      border-radius: 3px;
+    }
     color: var(--blue);
   }
+`;
+
+export const Loading = styled.div`
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ProjectInfo = styled.article`
@@ -64,7 +81,7 @@ export const ProjectInfo = styled.article`
   /* border: 1px solid black; */
   padding: 0 30px;
   text-align: center;
-  line-height: 2rem;
+  line-height: var(--line-height);
 
   & > h3 {
     text-align: center;
