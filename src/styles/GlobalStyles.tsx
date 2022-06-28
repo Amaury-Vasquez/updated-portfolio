@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
     --red: #e84545;
     --loading-red: #c64756;
-    --padding: 10px;
+    --line-height: 2rem;
   }
 
   *, *:before, *:after {
@@ -35,5 +35,5 @@ export const GlobalStyles = createGlobalStyle`
     width: 100vw;
     font-family: Rubik, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-  
+
 `;
