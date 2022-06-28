@@ -39,14 +39,25 @@ export const Head = styled.header`
   }
 `;
 
-export const Image = styled.img`
-  border-radius: 100%;
+export const ImageContainer = styled.div`
   grid-row-start: 1;
-  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    ${fadeIn()};
+    border-radius: 100%;
+    width: inherit;
+    height: inherit;
+  }
 
   @media (${DeviceSize.laptop}) {
     height: 100px;
     width: 100px;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   @media (${DeviceSize.mobile}) {
