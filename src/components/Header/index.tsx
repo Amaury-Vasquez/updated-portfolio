@@ -1,3 +1,4 @@
+import { FaUserSecret } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 
 import { SkeletonLoader } from '../SkeletonLoader';
@@ -16,7 +17,7 @@ export const Header = () => {
         {loaded ? (
           <img width="100px" height="100px" src={img} alt="profile photo" />
         ) : (
-          <SkeletonLoader />
+          <SkeletonLoader Icon={FaUserSecret} />
         )}
       </ImageContainer>
       <Name to="/">amaury vasquez</Name>
