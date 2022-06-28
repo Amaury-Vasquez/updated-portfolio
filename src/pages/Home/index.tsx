@@ -8,7 +8,7 @@ import { Hello, Info, Text } from './styles';
 import { IconText } from '../../components/IconText';
 import { Article, BoldText, TextContent } from '../../styles/templates';
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <Helmet>
@@ -52,3 +52,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

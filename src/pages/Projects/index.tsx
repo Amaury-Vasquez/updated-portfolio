@@ -4,7 +4,7 @@ import { CardsContainer } from './styles';
 import { useProjects } from '../../hooks/useProjects';
 import { ProjectCard } from '../../components/ProjectCard';
 
-export const Projects = () => {
+const Projects = () => {
   const projects = useProjects();
 
   return (
@@ -20,3 +20,5 @@ export const Projects = () => {
     </>
   );
 };
+
+export default Projects;

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useContact } from '../../hooks/useContact';
 import { ContactInfo, Email, Icons, Link, Message } from './styles';
 
-export const Contact = () => {
+const Contact = () => {
   const contactData = useContact();
 
   return (
@@ -37,3 +37,5 @@ export const Contact = () => {
     </>
   );
 };
+
+export default Contact;

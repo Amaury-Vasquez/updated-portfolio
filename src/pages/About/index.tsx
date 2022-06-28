@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { InfoSection, Quote } from './styles';
 import { Article, BoldText, TextContent } from '../../styles/templates';
 
-export const About = () => {
+const About = () => {
   return (
     <>
       <Helmet>
@@ -60,3 +60,5 @@ export const About = () => {
     </>
   );
 };
+
+export default About;
