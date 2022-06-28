@@ -85,7 +85,7 @@ export const ProjectInfo = styled.article`
 
   & > h3 {
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.1rem;
   }
 

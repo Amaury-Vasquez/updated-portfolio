@@ -4,7 +4,7 @@ import { DeviceSize } from '../../DeviceSize';
 
 export const Hello = styled.span`
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
   & > svg {
     color: gold;
   }

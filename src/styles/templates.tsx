@@ -23,7 +23,7 @@ export const Article = styled.article`
 export const BoldText = styled.h4`
   text-align: center;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 export const Page = styled.div`
@@ -44,7 +44,6 @@ export const Page = styled.div`
 export const TextContent = styled.div`
   ${fadeIn()};
   margin: 0 auto;
-  margin-top: 30px;
   height: auto;
   background: rgba(200, 200, 200, 0.1);
   color: var(--gray-text);
@@ -55,11 +54,11 @@ export const TextContent = styled.div`
   @media (${DeviceSize.laptop}) {
     width: 98%;
     padding: 30px 50px;
+    margin-top: 30px;
   }
 
   @media (${DeviceSize.mobile}) {
     width: 100%;
     padding: 20px 20px;
-    margin-top: 0;
   }
 `;
