@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
+import { fadeIn } from '../../styles/animation';
 import { DeviceSize } from '../../DeviceSize';
 
 export const ContactInfo = styled.div`
+  ${fadeIn()};
   height: auto;
   margin: 0 auto;
   border-radius: 3px;
