@@ -29,7 +29,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://amaury-vasquez-portfolio.netlify.app/",
+  "start_url": "https://amauryvasquez.netlify.app/",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#3AB0FF",
