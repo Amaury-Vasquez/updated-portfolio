@@ -45,7 +45,8 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  & > img {
+  & > img,
+  > div {
     ${fadeIn()};
     border-radius: 100%;
     width: inherit;

@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-import { Loader } from '../Loader';
+import { SkeletonLoader } from '../SkeletonLoader';
 import { useImageLoad } from '../../hooks/useImageLoad';
 import { Link, Head, ImageContainer, Name, Nav } from './styles';
 
@@ -14,9 +14,9 @@ export const Header = () => {
     <Head>
       <ImageContainer>
         {loaded ? (
-          <img width="100px" height="110px" src={img} alt="profile photo" />
+          <img width="100px" height="100px" src={img} alt="profile photo" />
         ) : (
-          <Loader />
+          <SkeletonLoader />
         )}
       </ImageContainer>
       <Name to="/">amaury vasquez</Name>
