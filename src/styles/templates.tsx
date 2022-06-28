@@ -47,7 +47,6 @@ export const TextContent = styled.div`
   margin-top: 30px;
   height: auto;
   background: rgba(200, 200, 200, 0.1);
-  /* border: 1px solid var(--gray); */
   color: var(--gray-text);
   border-radius: 5px;
   text-align: center;
