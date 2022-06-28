@@ -18,10 +18,7 @@ const skeleton = ({ time = '2s' } = {}) => css`
 `;
 
 //Height and width is expected to be given by the father
-export const Skeleton = styled.div`
-  padding: 10px;
-  /* background-color: var(--gray); */
-`;
+export const Skeleton = styled.div``;
 
 export const Animated = styled.div`
   ${skeleton({ time: '5s' })}
