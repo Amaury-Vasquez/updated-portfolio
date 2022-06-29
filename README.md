@@ -1,11 +1,6 @@
 # Amaury Vasquez
 
-<div style="border-radius: 100%; height: 200px; width: 200px;" align="center"> 
-  <img src="https://i.imgur.com/39jqiyC.jpg?1" width="200" heigth="200" alt="Amaury vasquez" />
-</div>
-
-<p align="center"><a href="https://amauryvasquez.com/" target="_blank"> Personal page </a> </p>
-
+<a align="center" href="https://amauryvasquez.com/" target="_blank"> Personal page </a>
 Personal web page, created to show the world who i am and the skills i master.
 
 ## Sections
