@@ -9,7 +9,7 @@ import { precacheAndRoute } from 'workbox-precaching';
 import { CacheFirst } from 'workbox-strategies';
 import { registerRoute, NavigationRoute } from 'workbox-routing';
 
-NavigationRoute('https://amauryvasquez.netlify.app/');
+NavigationRoute('https://amauryvasquez.com/');
 precacheAndRoute(self.__WB_MANIFEST);
 registerRoute(
   /^https?:\/\/www.imgur.com\/.*/,
