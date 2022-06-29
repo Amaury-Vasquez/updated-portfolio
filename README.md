@@ -1,8 +1,8 @@
 # Amaury Vasquez
 
-<p align="center"> 
-  <img style="border-radius: 100%;" src="https://i.imgur.com/39jqiyC.jpg?1" width="320" alt="Amaury vasquez" />
-</p>
+<div align="center"> 
+  <img style="border-radius: 100%;" src="https://i.imgur.com/39jqiyC.jpg?1" width="200" heigth="200" alt="Amaury vasquez" />
+</div>
 
 <p align="center"><a href="https://amauryvasquez.com/" target="_blank"> Personal page </a> </p>
 
