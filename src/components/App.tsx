@@ -10,6 +10,7 @@ import { GlobalStyles } from '../styles/GlobalStyles';
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
 const Contact = lazy(() => import('../pages/Contact'));
+const NotFound = lazy(() => import('../pages/NotFound'));
 const Projects = lazy(() => import('../pages/Projects'));
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Suspense fallback={<FallbackScreen />}>
             <Routes>
               <Route element={<Home />} path="/" />
+              <Route element={<NotFound />} path="*" />
               <Route element={<About />} path="/about" />
               <Route element={<Contact />} path="/contact" />
               <Route element={<Projects />} path="/projects" />
