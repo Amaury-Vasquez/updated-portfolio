@@ -1,6 +1,7 @@
 # Amaury Vasquez
 
-<a align="center" href="https://amauryvasquez.com/" target="_blank"> Personal page </a>
+<p align="center"><a align="center" href="https://amauryvasquez.com/" target="_blank"> Personal page </a> </p>
+
 Personal web page, created to show the world who i am and the skills i master.
 
 ## Sections
