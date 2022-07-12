@@ -17,6 +17,15 @@ export const useProjects = () => {
   const projects: ProjectData[] = [
     {
       description:
+        'Project created to recolect some basic games I created previously into a single page.',
+      imageLink: 'https://i.imgur.com/ZPIRzDJ.jpg',
+      link: 'https://games.amauryvasquez.com/',
+      powered: { color: '#5fd3f3', Icon: FaReact, tool: 'React' },
+      repositorie: 'https://github.com/Amaury-Vasquez/amvas-games',
+      title: 'Game station',
+    },
+    {
+      description:
         'Final project of college subject "Análisis y diseño de algortimos".',
       imageLink: 'https://i.imgur.com/GYutGbF.jpg',
       link: 'https://algoritmo-corte-varillas.netlify.app/',
@@ -38,15 +47,6 @@ export const useProjects = () => {
       powered: { color: '#5fd3f3', Icon: FaReact, tool: 'React' },
       repositorie: 'https://github.com/Amaury-Vasquez/checkers',
       title: 'Checkers',
-    },
-    {
-      description:
-        'Project created to recolect some basic games I created previously into a single page.',
-      imageLink: 'https://i.imgur.com/ZPIRzDJ.jpg',
-      link: 'https://amvasgamestation.netlify.app/',
-      powered: { color: '#5fd3f3', Icon: FaReact, tool: 'React' },
-      repositorie: 'https://github.com/Amaury-Vasquez/game-station',
-      title: 'Game station',
     },
   ];
 
